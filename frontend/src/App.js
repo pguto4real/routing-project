@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         path: "events",
         element: <EventsRoot />,
         children: [
-          { path: "", element: <EventsPage /> },
+          { index: true, element: <EventsPage /> },
           { path: ":eventId", element: <EventDetailPage /> },
           { path: "new", element: <NewEventPage /> },
           { path: ":eventId/edit", element: <EditEventPage /> },
