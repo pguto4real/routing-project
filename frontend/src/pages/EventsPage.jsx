@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const DUMMY_EVENT = [
   {
     id: "e1",
@@ -10,12 +11,15 @@ const DUMMY_EVENT = [
   },
 ];
 const EventsPage = () => {
-    console.log(DUMMY_EVENT)
+  console.log(DUMMY_EVENT);
   return (
     <>
       <ul>
         {DUMMY_EVENT.map((event) => (
-          <li key={event.id}>{event.title}</li>
+          <li key={event.id}>
+            {" "}
+            <Link to={`/events/${event.id}`}>{event.title}</Link>
+          </li>
         ))}
       </ul>
     </>
