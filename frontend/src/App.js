@@ -28,6 +28,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import EventsPage from "./pages/EventsPage";
+import EventDetailPage from "./pages/EventDetailPage";
 
 
 const router = createBrowserRouter([
@@ -38,8 +39,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "/events", element: <EventsPage /> },
-      { path: "/products", element: <Product /> },
-      { path: "/products/:productId", element: <ProductDetailPage /> },
+      { path: "/events/:eventId", element: <EventDetailPage /> },
+      { path: "/events/new", element: <Product /> },
     ],
   },
 ]);
