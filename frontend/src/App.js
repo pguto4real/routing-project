@@ -31,13 +31,14 @@ import EventsPage from "./pages/EventsPage";
 import EventDetailPage from "./pages/EventDetailPage";
 import NewEventPage from "./pages/NewEventPage";
 import EditEventPage from "./pages/EditEventPage";
+import Root from "./pages/Root";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <Error />,
+    // errorElement: <Error />,
     children: [
       { index: true, element: <HomePage /> },
       { path: "/events", element: <EventsPage /> },
