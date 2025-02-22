@@ -26,11 +26,8 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./pages/HomePage";
-import Product from "./pages/Product";
-import Root from "./pages/Root";
-import Error from "./pages/Error";
-import ProductDetailPage from "./pages/ProductDetailPage";
+import HomePage from "./pages/HomePage";
+
 
 const router = createBrowserRouter([
   {
@@ -38,7 +35,7 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <Error />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <HomePage /> },
       // { path: "/", element: <Home /> },
       { path: "/products", element: <Product /> },
       { path: "/products/:productId", element: <ProductDetailPage /> },
@@ -46,7 +43,7 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  return <div></div>;
+ return <RouterProvider router={router} />;
 }
 
 export default App;
